@@ -1,9 +1,9 @@
-name             'create'
-maintainer       'YOUR_NAME'
-maintainer_email 'YOUR_EMAIL'
+name             'win-base'
+maintainer       'Garry Cyre'
+maintainer_email 'garry@cyre.ca'
 license          'All rights reserved'
-description      'Installs/Configures create'
-long_description 'Installs/Configures create'
+description      'Installs/Configures win-bse'
+long_description 'Installs/Configures win-base'
 
 version          '0.1.0'
 

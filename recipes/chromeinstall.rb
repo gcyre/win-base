@@ -7,9 +7,11 @@
 # All rights reserved - Do Not Redistribute
 #
 
-# Install some basics 
-# Install Chocolatey
-include_recipe 'chocolatey::default'
-include_recipe 'win-base::chromeinstall'
+include_recipe 'chocolatey'
 
+%w{notepadplusplus GoogleChrome}.each do | pack|
+	chocolatey pack
+end
+
+chocolatey 'DotNet4.5'
 

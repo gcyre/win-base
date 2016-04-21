@@ -11,5 +11,5 @@
 # Install Chocolatey
 include_recipe 'chocolatey::default'
 include_recipe 'win-base::chromeinstall'
-
+include_recipe 'win-base::windowsfeatures'
 

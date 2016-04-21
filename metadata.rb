@@ -8,3 +8,4 @@ long_description 'Installs/Configures win-base'
 version          '0.1.0'
 
 depends 'chocolatey'
+depends 'windows'

@@ -13,7 +13,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.omnibus.chef_version = 'latest'
   end
   
-  config.vm.box = 'mwrock/Windows2012R2'
+  config.vm.box = 'win2012r2packer'
   config.vm.network :private_network, type: 'dhcp'
   config.berkshelf.enabled = true
 
@@ -27,7 +27,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     }
 
     chef.run_list = [
-
       'recipe[win-base::default]'
     ]
   end

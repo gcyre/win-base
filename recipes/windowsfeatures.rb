@@ -9,8 +9,22 @@
 
 include_recipe 'windows'
 
-%w{iis-WebServerRole iis-WebServer}.each do |iis|
+(node['iis']['components']).each do |iis|
 	windows_feature iis do
 		action :install
 	end
 end
+
+service 'w3svc' do
+  action [:enable, :start]
+end
+
+file 'c:\inetpub\wwwroot\default.htm' do
+  content '
+  <html>
+     <body>
+        <h1>Hello World</h1>
+     </body>
+  </html>'
+end
+

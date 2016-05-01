@@ -13,3 +13,8 @@ include_recipe 'chocolatey::default'
 include_recipe 'win-base::chromeinstall'
 include_recipe 'win-base::windowsfeatures'
 
+directory 'C:/temp'
+
+template 'C:/temp/server-info.txt' do
+  source 'server-info.txt.erb'
+end
